@@ -11,6 +11,7 @@ class App extends Component {
 
     return (
       <>
+      
         <Header></Header>
         <HomeBanner></HomeBanner>
         <AboutContest></AboutContest>
