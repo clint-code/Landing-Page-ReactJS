@@ -1,0 +1,32 @@
+//font headings
+
+//Neris Semibold font
+@mixin neris-semibold-font-property($font-family:'nerissemibold'){
+    font-family:'#{$font-family}', Arial, Helvetica, sans-serif;
+}
+
+//Neris Light font
+@mixin neris-light-font($font-family: 'nerislight'){
+    font-family:'#{$font-family}', Helvetica, sans-serif;
+}
+
+//Le Gourmet Bouncy font
+@mixin legourmet-bouncy-font($font-family: 'legourmetbouncy'){
+    font-family:'#{$font-family}', Arial, Helvetica, sans-serif;
+}
+
+//transition
+@mixin transition-elements($transition-elems:all ease-in-out 0.5s){
+    -webkit-transition: $transition-elems;
+    -o-transition: $transition-elems;
+    -moz-transition: $transition-elems;
+    transition: $transition-elems;
+}
+
+@mixin box-shadow($shadow: 1px 2px 8px rgba(0,0,0,0.1)){
+    box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    -o-box-shadow: $shadow;
+    -ms-box-shadow: $shadow;
+    -webkit-box-shadow: $shadow;
+}
