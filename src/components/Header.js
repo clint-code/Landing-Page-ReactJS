@@ -20,7 +20,7 @@ export default class Header extends Component {
 
             <Nav className = "nav-section">
                 <Nav.Link href="#about-contest">About</Nav.Link>  
-                <Nav.Link href="#winners-entries">Winners &amp; Entries</Nav.Link>  
+                <Nav.Link href="#featured-entries">Winners &amp; Entries</Nav.Link>  
                 <Nav.Link href="#recipes">Recipes</Nav.Link>  
 
             </Nav>

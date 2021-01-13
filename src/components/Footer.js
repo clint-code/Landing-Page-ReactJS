@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container, Row} from 'react-bootstrap';
+import { Container, Row, Button} from 'react-bootstrap';
 
 export default class About extends Component {
     render(){
@@ -23,21 +23,21 @@ export default class About extends Component {
                             <ul className="d-flex p-4 mb-0">
 
                             <li>
-                                <a href="#" className="single-social-icon">
+                                <Button className="single-social-icon">
                                     <img src="img/footer/facebook-icon.png" alt="facebook-icon" className="img-fluid" />
-                                </a>
+                                </Button>
                             </li>
 
                             <li>
-                                <a href="#" className="single-social-icon">
+                                <Button className="single-social-icon">
                                     <img src="img/footer/instagram-icon.png" alt="instagram-icon" className="img-fluid" />
-                                </a>
+                                </Button>
                             </li>
 
                             <li>
-                                <a href="#" className="single-social-icon">
+                                <Button className="single-social-icon">
                                     <img src="img/footer/twitter-icon.png" alt="twitter-icon" class="img-fluid" />
-                                </a>
+                                </Button>
                             </li>
 
                         </ul>
