@@ -1,0 +1,929 @@
+@import 'variables';
+@import 'fonts';
+@import 'mixins';
+
+/**/
+
+html,
+body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.body-max-width {
+    max-width: 1696px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/*typography*/
+h1,
+h2 {
+    @include legourmet-bouncy-font;
+}
+
+h2 {
+    font-size: 4em;
+}
+
+h3 {
+    font-size: 3em;
+}
+
+h5,
+p {
+    @include neris-semibold-font-property;
+    font-size: 22px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+}
+
+.focus-text {
+    @include legourmet-bouncy-font;
+    font-size: 1.5em;
+}
+
+
+a {
+    @include neris-semibold-font-property;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+/*spacing*/
+.x-space-5 {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.no-padding {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.center-content {
+    margin: 0 auto;
+    width: 75%;
+}
+
+.half {
+    width: 45%;
+    margin-right: 2.5%;
+}
+
+/*nav section*/
+.main-header {
+    position: fixed;
+    z-index: 10;
+    top: 10%;
+    right: 0;
+    width: 100%;
+}
+
+.logo-section img {
+    max-width: 100px;
+}
+
+.nav-section {
+    width: 100%;
+    margin: 0 auto;
+
+    li>a {
+        @include neris-semibold-font-property;
+        text-transform: uppercase;
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+
+    .active {
+        color: $color-3 !important;
+    }
+
+}
+
+.scrolled {
+    @include box-shadow();
+    background-color: #fff;
+    top: 0%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    @include transition-elements();
+}
+
+.menuOpener {
+    display: none;
+}
+
+#side-mobile-menu {
+    display: none;
+}
+
+
+/*banner section*/
+
+.banner-image{
+    position: relative;
+}
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner-text-top {
+    h1 {
+        font-size: 5em;
+        margin-bottom: 0px;
+    }
+}
+
+.banner-text-bottom {
+    h1 {
+        .large-font {
+            font-size: 5em;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.overlay {
+    position: absolute;
+    background: #000;
+    opacity: 70%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.bg-arrow {
+    position: absolute;
+    top: 92%;
+    z-index: 2;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+
+    img {
+        max-width: 50px;
+    }
+
+    &:before {
+        content: "";
+        background-image: url('../img/icons/down-arrow-icon.png');
+        height: 15px;
+        display: block;
+        background-repeat: no-repeat;
+        width: 26px;
+        position: absolute;
+        left: 50%;
+        bottom: 11%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/*about-contest section*/
+
+#about-contest {
+    position: relative;
+    background-image: url('../img/about-contest/about-contest-background.png');
+    background-size: 100%;
+}
+
+.slideContainer {
+    .owl-dots {
+        position: absolute;
+        bottom: -11%;
+        left: 11%;
+
+        .owl-dot {
+            background: $color-7;
+            width: 46px;
+            height: 7px;
+            margin-right: 10px;
+            display: inline-block;
+        }
+
+        .active {
+            background-color: $color-3;
+        }
+
+    }
+}
+
+.single-slider {
+    margin-top: 10%;
+}
+
+.img-section {
+    margin-top: -21%;
+}
+
+.cnt-description-section {
+    position: relative;
+    width: 70%;
+    margin-left: 10%;
+
+}
+
+.border-section {
+    position: absolute;
+    z-index: 1;
+    bottom: -4%;
+    left: 0%;
+}
+
+.border-section-2 {
+    position: absolute;
+    z-index: 1;
+    bottom: 6%;
+    left: 0%;
+}
+
+.flour-powder-art-section {
+    position: absolute;
+    left: 62%;
+    z-index: 2;
+    bottom: -15%;
+    right: -45%;
+}
+
+.bg-arrow-2 {
+    position: absolute;
+    top: 100%;
+    z-index: 2;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+
+    img {
+        max-width: 50px;
+    }
+
+    &:before {
+        content: "";
+        background-image: url('../img/icons/down-arrow-icon.png');
+        height: 15px;
+        display: block;
+        background-repeat: no-repeat;
+        width: 26px;
+        position: absolute;
+        left: 50%;
+        bottom: 11%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/*featured entries section*/
+#featured-entries {
+    padding-bottom: 7.5em;
+    margin-top: -78px;
+}
+
+.featured-entries-background {
+    background-image: url('../img/entries/featured-entries-background-2.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.links-section {
+    padding-top: 10.5em;
+}
+
+.links {
+
+    .link>a {
+        text-transform: uppercase;
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    .active {
+        color: $color-3 !important;
+
+        &::after {
+            border-bottom: 1px solid $color-3;
+            border-radius: 0px;
+            content: "";
+            display: block;
+            padding-top: 10px;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+}
+
+.entriesContainer {
+    .owl-prev {
+        position: absolute;
+        top: 25%;
+        left: -10%;
+    }
+
+    .owl-next {
+        position: absolute;
+        right: -10%;
+        top: 25%;
+    }
+
+}
+
+.single-entry-slide {
+
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+
+    .single-entry {
+        width: auto;
+        margin-right: 5%;
+    }
+}
+
+.single-entry {
+    border-radius: 2em;
+    background-color: transparent;
+    width: 22%;
+    margin-right: 2.5%;
+    margin-bottom: 4%;
+}
+
+.winner-profile {
+    position: absolute;
+    top: -13%;
+    left: 8%;
+    border-radius: 3em;
+    border: 5px solid $color-3;
+    width: 30%;
+
+    img {
+        border-radius: 2em;
+    }
+}
+
+.center-button-section {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.green-btn {
+    background-color: $color-4;
+    border: 2px solid $color-3;
+    border-radius: 20px;
+    color: $color-3 !important;
+}
+
+.modal-content-winners {
+    background-color: #0fb650;
+    border: 2px solid #ffe900;
+
+    .modal-title {
+        width: 100%;
+        color: #ffe900;
+    }
+
+}
+
+
+.allwinnersContainer,
+.entriesContainer {
+    .owl-dots {
+        position: absolute;
+        bottom: 0%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .owl-dot {
+            background: $color-7;
+            width: 46px;
+            height: 7px;
+            margin-right: 10px;
+            display: inline-block;
+        }
+
+        .active {
+            background-color: $color-3;
+        }
+
+    }
+}
+
+/**recipes**/
+
+.recipes-background {
+
+    background-image: url('../img/recipes/recipes-background-image.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: -10%;
+    padding-top: 10%;
+    padding-bottom: 7%;
+}
+
+.recipe-filter {
+
+    .link>a {
+        text-transform: uppercase;
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    .active {
+        color: $color-3 !important;
+
+        &::after {
+            content: "";
+            border-bottom: 1px solid $color-3;
+            border-radius: 0px;
+            display: block;
+            padding-top: 10px;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+}
+
+.recipe-slider {
+    width: 80%;
+    margin: 0em auto;
+}
+
+.recipeContainer {
+    .owl-dots {
+        position: absolute;
+        bottom: -18%;
+        right: 30%;
+        transform: translate(-50%, -50%);
+
+        .owl-dot {
+            background: $color-7;
+            width: 46px;
+            height: 7px;
+            margin-right: 10px;
+            display: inline-block;
+        }
+
+        .active {
+            background-color: $color-3;
+        }
+
+    }
+
+    .owl-prev {
+        position: absolute;
+        top: 45%;
+        left: -10%;
+    }
+
+    .owl-next {
+        position: absolute;
+        right: -10%;
+        top: 45%;
+    }
+
+}
+
+.recipe-selection {
+    width: 60%;
+    margin: 0 auto
+}
+
+.single-recipe-selection {
+    margin-right: 4%;
+    filter: grayscale(100%);
+    cursor: pointer;
+}
+
+.active-recipe {
+    filter: grayscale(0%) !important;
+}
+
+.list-style {
+    background: $color-6;
+    border-radius: 2em;
+    border: 4px solid $color-3;
+    padding: 10px;
+    @include neris-semibold-font-property;
+}
+
+/*footer section*/
+
+.footer-section {
+    p {
+        @include neris-light-font;
+        color: $color-7;
+        font-size: 1em;
+        margin-bottom: 0px;
+    }
+
+}
+
+.single-social-icon {
+
+    margin-right: 2em;
+
+    img {
+        border-radius: 7em;
+        background-color: #fff;
+        padding: 0.5em;
+        @include box-shadow(1px 2px 8px rgba(0, 0, 0, 0.4));
+    }
+
+}
+
+/**MEDIA QUERIES**/
+
+/** MEDIA QUERY 1300PX**/
+
+@media(max-width: 1400px) {
+
+    #about-contest,
+    #featured-entries {
+        background-size: auto;
+    }
+
+
+    .slide-section {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .slideContainer {
+
+        .owl-dots {
+            position: absolute;
+            bottom: 13%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .single-slider {
+            margin-top: 10%;
+            margin-bottom: 10%;
+        }
+
+        .cnt-description-section {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    .img-slide {
+        display: none;
+    }
+
+
+    .flour-powder-art-section {
+        display: none;
+    }
+
+    .featured-entries-background {
+        background-image: url("../img/entries/featured-entries-background.png");
+
+    }
+
+    .border-section,
+    .border-section-2 {
+        display: none;
+    }
+
+    .recipes-background {
+        background-image: url("../img/recipes/recipes-background-image.jpg");
+        margin-top: -7%;
+    }
+
+    .slideContainer {
+
+        .owl-dots {
+            bottom: 5%;
+        }
+
+    }
+
+    .bg-arrow,
+    .bg-arrow-2 {
+        top: 84%;
+    }
+
+}
+
+
+/** MEDIA QUERY 1200PX**/
+
+@media(max-width: 1200px) {
+
+    .center-content {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    //navigation menu
+    .logo-section {
+        margin-top: 2em;
+    }
+
+    .main-header {
+        position: absolute;
+        top: 0px;
+        height: 80px;
+    }
+
+    .headerWrapper {
+        position: relative;
+        height: 80px;
+
+        .menuOpener {
+            display: block;
+            position: absolute;
+            cursor: pointer;
+            background: url('../img/icons/menu-open-icon-white.png') right center no-repeat;
+            width: 50px;
+            height: 50px;
+            right: 40px;
+            top: 40px;
+            @include transition-elements(0.5s);
+        }
+
+        .close-icon {
+            background: url('../img/icons/menu-close-icon-white.png') right center no-repeat;
+            width: 40px;
+            height: 40px;
+        }
+
+        .open-icon {
+            background: url('../img/icons/menu-open-icon-white.png') right center no-repeat;
+            width: 40px;
+            height: 40px;
+        }
+
+    }
+
+    .nav-section {
+        display: none;
+
+    }
+
+    .sidr {
+
+        @include box-shadow();
+
+        .nav-section {
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+
+            ul li {
+                width: 100%;
+                padding-left: 0%;
+            }
+
+            a {
+                color: black !important;
+            }
+        }
+
+    }
+
+    //banner section
+    .banner-text {
+        h1 {
+            font-size: 4em;
+        }
+    }
+
+    .banner-text-bottom {
+        h1 .large-font {
+            font-size: 3em;
+        }
+    }
+
+    //featured entries
+
+    .featured-entries-background {
+        background-image: url('../img/entries/featured-entries-background.png');
+        background-size: 100% 120%;
+    }
+
+    #featured-entries {
+        padding-bottom: 5.5em;
+        margin-top: 0px;
+    }
+
+    .links-section {
+        padding-top: 7.5em;
+    }
+
+    //recipes section
+    .recipe-filter {
+        -ms-flex-pack: center !important;
+        justify-content: center !important;
+    }
+
+    .recipes-background {
+        background-image: url('../img/recipes/recipes-background-image.jpg');
+        background-size: auto;
+        background-position: center;
+    }
+
+    .cnt-recipe-section {
+        h2 {
+            text-align: center;
+        }
+
+        .half {
+            width: 100%;
+            margin: 0 auto;
+            float: none !important;
+        }
+    }
+
+    .bg-arrow,
+    .bg-arrow-2 {
+        display: none;
+    }
+
+
+}
+
+@media(max-width: 1000px) {
+
+    .banner-text {
+        h1 {
+            font-size: 3em;
+        }
+
+        h1 .large-font {
+            font-size: 2.5em;
+        }
+    }
+
+    .bg-arrow {
+        bottom: auto;
+    }
+
+    .recipe-slider {
+        width: 90%;
+        margin: 1em auto;
+    }
+
+    #featured-entries {
+        padding-bottom: 3.5em;
+    }
+
+    .recipeContainer {
+        .owl-dots {
+            bottom: -10%;
+            right: 20%;
+            right: 0%;
+            width: 100%;
+            left: 60%;
+        }
+    }
+
+
+}
+
+
+@media(max-width: 765px) {
+
+    .banner-text {
+        width: 70%;
+        margin: 1em auto;
+
+        h1 {
+            font-size: 2em;
+        }
+
+        h1 .large-font {
+            font-size: 2.5em;
+        }
+    }
+
+    .cnt-description-section {
+        h2 {
+            font-size: 3em;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    }
+
+    .links-section {
+        flex-direction: column;
+        padding-top: 4.5em;
+
+        h2 {
+            text-align: center;
+            font-size: 3em;
+        }
+
+        .grid-icon-section {
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+    }
+
+    .cnt-recipe-section {
+        h2 {
+            font-size: 3.5em;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+    }
+
+    .recipe{
+        h2{
+            font-size: 3.5em;
+        }
+    }
+
+    .copyright-text {
+        float: none !important;
+        text-align: center;
+        width: 100%;
+        order: 2;
+        padding: 0px !important;
+    }
+
+    .social-icons-section {
+        float: none !important;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+
+        .single-social-icon {
+            margin-right: 1em;
+            margin-left: 1em;
+
+            img {
+                width: 60%;
+            }
+        }
+    }
+
+
+
+
+}
+
+@media(max-width: 500px) {
+
+    .logo-section {
+        img {
+            max-width: 80px;
+        }
+    }
+
+    .banner-text {
+        h1 {
+            font-size: 1.5em;
+
+            .large-font {
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    .winner-profile {
+        border-width: 2px;
+    }
+
+    .entriesContainer,
+    .allwinnersContainer {
+        .owl-dots {
+            width: 100%;
+            left: 75%;
+        }
+    }
+
+    .recipeContainer {
+        .owl-prev {
+            top: 10%;
+            left: -5%;
+        }
+
+        .owl-next {
+            top: 10%;
+            right: -7%;
+        }
+    }
+
+}
